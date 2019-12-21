@@ -10,6 +10,7 @@
 #define CSAPP_two_h
 
 #include <stdio.h>
+#include <stddef.h>
 
 void callTwoFunction(void);
 

@@ -61,8 +61,8 @@
 			isa = PBXGroup;
 			children = (
 				B39DB8B523AE0C6400899FB8 /* main.c */,
-				B39DB8BC23AE0C7C00899FB8 /* CSAPP-two.c */,
 				B39DB8BE23AE0C8800899FB8 /* CSAPP-two.h */,
+				B39DB8BC23AE0C7C00899FB8 /* CSAPP-two.c */,
 			);
 			path = CSAPPExercise;
 			sourceTree = "<group>";
