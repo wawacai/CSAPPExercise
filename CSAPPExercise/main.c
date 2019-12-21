@@ -7,9 +7,11 @@
 //
 
 #include <stdio.h>
+#include "CSAPP-two.h"
 
 int main(int argc, const char * argv[]) {
+     callTwoFunction();
     // insert code here...
-    printf("Hello, World!\n");
+//    printf("Hello, World!\n");
     return 0;
 }
