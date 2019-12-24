@@ -141,13 +141,28 @@ int two_int_size_is_32() {
     return result && !twoResult;
 }
 
-int lower_one_mask(int n) {
-    
+/// 2.68
+int two_lower_one_mask(int n) {
+    unsigned c = -1;
+    int d = (c >> (31-n)) >> (n && 1);
+    return d;
+}
+
+/// 2.69
+unsigned two_rotate_left(unsigned x, int n) {
+    unsigned a = x << n;
+    n = n-1;
+    unsigned b = (x >> (31-n)) >> (n && 1);
+    return a+b;
+}
+
+/// 2.70
+int two_fits_bits(int x, int n) {
     return 1;
 }
 
 void callTwoFunction(void) {
-    printf("%d \n", two_int_size_is_32());
+    printf("%x \n", two_rotate_left(0x12345678, 31));
     
 //    printf("%d \n", two_int_shifts_are_arithmetic());
 //    two_replace_byte(0x12345678, 0, 0xAB);
