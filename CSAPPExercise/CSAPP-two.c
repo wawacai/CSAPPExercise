@@ -116,7 +116,7 @@ int two_any_odd_one(unsigned x) {
     return result && 1;
 }
 
-// MARK: - 暂时没有做出来 2.66
+// MARK: - 没有做出来 2.66
 /// 2.66
 int two_leftmost_one(unsigned x) {
     return 1;
@@ -158,11 +158,12 @@ unsigned two_rotate_left(unsigned x, int n) {
 
 /// 2.70
 int two_fits_bits(int x, int n) {
-    return 1;
+    int a = x >> (n-1);
+    return (a == 0) || (a == -1);
 }
 
 void callTwoFunction(void) {
-    printf("%x \n", two_rotate_left(0x12345678, 31));
+    printf("%d \n", two_fits_bits(-4, 3));
     
 //    printf("%d \n", two_int_shifts_are_arithmetic());
 //    two_replace_byte(0x12345678, 0, 0xAB);
