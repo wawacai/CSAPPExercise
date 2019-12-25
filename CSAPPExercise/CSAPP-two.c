@@ -7,6 +7,7 @@
 //
 
 #include "CSAPP-two.h"
+#include <string.h>
 
 typedef unsigned char *two_byte_pointer;
 
@@ -167,6 +168,13 @@ typedef unsigned packed_t;
 int xbyte(packed_t word, int byttenum) {
     int a = word << (32 - ((byttenum + 1) << 3));
     return a >> 24;
+}
+
+/// 2.72
+void two_copy_int(int val, void *buf, int maxbytes) {
+    if (maxbytes >= sizeof(val)) {
+        memcpy(buf, (void *)&val, sizeof(val));
+    }
 }
 
 void callTwoFunction(void) {
