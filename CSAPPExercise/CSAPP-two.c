@@ -162,8 +162,15 @@ int two_fits_bits(int x, int n) {
     return (a == 0) || (a == -1);
 }
 
+typedef unsigned packed_t;
+/// 2.71
+int xbyte(packed_t word, int byttenum) {
+    int a = word << (32 - ((byttenum + 1) << 3));
+    return a >> 24;
+}
+
 void callTwoFunction(void) {
-    printf("%d \n", two_fits_bits(-4, 3));
+    printf("%x \n", xbyte(0x22ff, 0));
     
 //    printf("%d \n", two_int_shifts_are_arithmetic());
 //    two_replace_byte(0x12345678, 0, 0xAB);
