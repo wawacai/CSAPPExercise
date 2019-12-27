@@ -202,10 +202,19 @@ int two_saturating_add(int x, int y) {
     return (sum & (-mark)) | (a + (!mark && (temX ^ 0)));
 }
 
+/// 2.74
+int two_tsub_ok(int x, int y) {
+    int w = (sizeof(int) << 3) - 1;
+    int mark1 = (x ^ y) >> w;
+    int mark2 = ((x - y) ^ y) >> w;
+    int mark = (mark1 && mark2);
+    return mark;
+}
+
 void callTwoFunction(void) {
-    unsigned a = -1;
-    a = a >> 1;
-    printf("%x \n", two_saturating_add((int)a, 1));
+    unsigned a = 1;
+    a = a << 31;
+    printf("%x \n", two_tsub_ok((int)a, 1));
     
 //    printf("%d \n", two_int_shifts_are_arithmetic());
 //    two_replace_byte(0x12345678, 0, 0xAB);
