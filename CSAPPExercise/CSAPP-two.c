@@ -8,6 +8,7 @@
 
 #include "CSAPP-two.h"
 #include <string.h>
+#include <math.h>
 
 typedef unsigned char *two_byte_pointer;
 
@@ -177,8 +178,34 @@ void two_copy_int(int val, void *buf, int maxbytes) {
     }
 }
 
+/// 2.73
+int two_saturating_add(int x, int y) {
+    int w = (sizeof(int) << 3) - 1;
+    int mark1 = ~(x ^ y) >> w;
+    int mark2 = ((x + y) ^ y) >> w;
+    int mark = !(mark1 && mark2);
+    
+    int sum = x + y;
+//    int result = (sum - y) == x;
+    
+    unsigned temX = x;
+    temX = temX >> 31;
+    
+    unsigned a = -1;
+    a = a >> 1;
+    printf("a = %x \n", a);
+//    int c1 = (sum & (-result));
+//    printf("c1 = %x \n", c1);
+//    int c2 = ((-(-result+1) >> 1) + (!result && (temX ^ 0)));
+//    printf("c2 = %x \n", c2);
+    
+    return (sum & (-mark)) | (a + (!mark && (temX ^ 0)));
+}
+
 void callTwoFunction(void) {
-    printf("%x \n", xbyte(0x22ff, 0));
+    unsigned a = -1;
+    a = a >> 1;
+    printf("%x \n", two_saturating_add((int)a, 1));
     
 //    printf("%d \n", two_int_shifts_are_arithmetic());
 //    two_replace_byte(0x12345678, 0, 0xAB);
