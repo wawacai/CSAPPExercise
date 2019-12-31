@@ -211,6 +211,16 @@ int two_tsub_ok(int x, int y) {
     return mark;
 }
 
+/// 2.75
+unsigned unsigned_high_prod(unsigned x, unsigned y) {
+    int sx = x;
+    int sy = y;
+    int xw = sx >> ((sizeof(int) << 2^3) - 1);
+    int yw = sy >> ((sizeof(int) << 2^3) - 1);
+    unsigned high_prod = signed_high_prod(sx, sy) + sx & yw + sy & xw;
+    return high_prod;
+}
+
 void callTwoFunction(void) {
     unsigned a = -1;
     a = a >> 1;
