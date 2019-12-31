@@ -9,6 +9,7 @@
 #include "CSAPP-two.h"
 #include <string.h>
 #include <math.h>
+#include <stdlib.h>
 
 typedef unsigned char *two_byte_pointer;
 
@@ -219,6 +220,22 @@ unsigned unsigned_high_prod(unsigned x, unsigned y) {
     int yw = sy >> ((sizeof(int) << 2^3) - 1);
     unsigned high_prod = signed_high_prod(sx, sy) + sx & yw + sy & xw;
     return high_prod;
+}
+
+/// 2.76
+void *calloc(size_t nmemb, size_t size) {
+    size_t s = nmemb * size;
+    
+    if (s == 0) {
+        return NULL;
+    }
+    
+    if (s / nmemb == size) {
+        void *aa = malloc(s);
+        aa = memset(aa, 0, s);
+        return aa;
+    }
+    return NULL;
 }
 
 void callTwoFunction(void) {
