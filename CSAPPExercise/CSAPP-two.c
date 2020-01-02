@@ -267,6 +267,17 @@ int two_mul3div4(int x) {
     return two_divide_powers(x, 2);
 }
 
+/// 2.80
+void two_threeFourths(int x) {
+    int f = x & ~0x3;
+    int l = x & 0x3;
+    f = ((f >> 2) << 1) + f;
+    int is_neg = (0x01 << 31) & x && 1;
+    l = (l << 1) + l;
+    l = (l + (is_neg << 2) - is_neg) >> 2;
+    printf("%d", l + f);
+}
+
 /// 2.81
 void two_createBit(int j, int k) {
     // A
