@@ -255,6 +255,12 @@ void two_multiply(int x) {
     printf("%d %d %d %d", resultA, resultB, resultC, reslutD);
 }
 
+/// 2.78
+int two_divide_powers(int x, int k) {
+    int offset = (0x01 << 31) & x && 1;
+    return (x + (offset << k) - offset) >> k;
+}
+
 void callTwoFunction(void) {
     unsigned a = -1;
     a = a >> 1;
