@@ -267,6 +267,16 @@ int two_mul3div4(int x) {
     return two_divide_powers(x, 2);
 }
 
+/// 2.81
+void two_createBit(int j, int k) {
+    // A
+    int a = -1 << k;
+    // B
+    int b = (-1 << (j + k)) ^ -1;
+    b = b >> j << j;
+    printf("%x %x \n", a, b);
+}
+
 void callTwoFunction(void) {
     unsigned a = -1;
     a = a >> 1;
