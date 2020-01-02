@@ -213,7 +213,7 @@ int two_tsub_ok(int x, int y) {
 }
 
 /// 2.75
-unsigned unsigned_high_prod(unsigned x, unsigned y) {
+unsigned two_unsigned_high_prod(unsigned x, unsigned y) {
     int sx = x;
     int sy = y;
     int xw = sx >> ((sizeof(int) << 2^3) - 1);
@@ -223,7 +223,7 @@ unsigned unsigned_high_prod(unsigned x, unsigned y) {
 }
 
 /// 2.76
-void *calloc(size_t nmemb, size_t size) {
+void *two_calloc(size_t nmemb, size_t size) {
     size_t s = nmemb * size;
     
     if (s == 0) {
@@ -236,6 +236,23 @@ void *calloc(size_t nmemb, size_t size) {
         return aa;
     }
     return NULL;
+}
+
+/// 2.77
+void two_multiply(int x) {
+    // A
+    int resultA = (x << 4) + x;
+    
+    // B
+    int resultB = -(x << 3) + x;
+    
+    // C
+    int resultC = (x << 6) - (x << 2);
+    
+    // D
+    int reslutD = -(x << 7) + (x << 4);
+    
+    printf("%d %d %d %d", resultA, resultB, resultC, reslutD);
 }
 
 void callTwoFunction(void) {
