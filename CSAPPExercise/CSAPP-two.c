@@ -261,6 +261,12 @@ int two_divide_powers(int x, int k) {
     return (x + (offset << k) - offset) >> k;
 }
 
+/// 2.79
+int two_mul3div4(int x) {
+    x = (x << 1) + x;
+    return two_divide_powers(x, 2);
+}
+
 void callTwoFunction(void) {
     unsigned a = -1;
     a = a >> 1;
