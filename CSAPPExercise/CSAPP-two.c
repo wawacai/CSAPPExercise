@@ -288,6 +288,15 @@ void two_createBit(int j, int k) {
     printf("%x %x \n", a, b);
 }
 
+/// 2.82
+void two_judeTrueOrFalse() {
+    // A: 1     正确答案为 0
+    // B: 1 ----
+    // C: 0     正确答案为 1
+    // D: 1 ----
+    // E: 0     正确答案为 1
+}
+
 void callTwoFunction(void) {
     unsigned a = -1;
     a = a >> 1;
