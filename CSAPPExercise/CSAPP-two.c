@@ -297,6 +297,10 @@ void two_judeTrueOrFalse() {
     // E: 0     正确答案为 1
 }
 
+void two_eightTreeProblem() {
+    // A: y << k
+}
+
 void callTwoFunction(void) {
     unsigned a = -1;
     a = a >> 1;
