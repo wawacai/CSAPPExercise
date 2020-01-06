@@ -213,14 +213,14 @@ int two_tsub_ok(int x, int y) {
 }
 
 /// 2.75
-unsigned two_unsigned_high_prod(unsigned x, unsigned y) {
-    int sx = x;
-    int sy = y;
-    int xw = sx >> ((sizeof(int) << 2^3) - 1);
-    int yw = sy >> ((sizeof(int) << 2^3) - 1);
-    unsigned high_prod = signed_high_prod(sx, sy) + sx & yw + sy & xw;
-    return high_prod;
-}
+//unsigned two_unsigned_high_prod(unsigned x, unsigned y) {
+//    int sx = x;
+//    int sy = y;
+//    int xw = sx >> ((sizeof(int) << 2^3) - 1);
+//    int yw = sy >> ((sizeof(int) << 2^3) - 1);
+//    unsigned high_prod = signed_high_prod(sx, sy) + sx & yw + sy & xw;
+//    return high_prod;
+//}
 
 /// 2.76
 void *two_calloc(size_t nmemb, size_t size) {
@@ -297,18 +297,16 @@ void two_judeTrueOrFalse() {
     // E: 0     正确答案为 1
 }
 
+// MARK: - 没有做出来 2.83
 void two_eightTreeProblem() {
-    // A: y << k
+    // A: Y / (2^k -1)
 }
+
+
 
 void callTwoFunction(void) {
     unsigned a = -1;
     a = a >> 1;
     printf("%d \n", (int)a);
     printf("%x \n", two_tsub_ok(-2222222, 1));
-    
-//    printf("%d \n", two_int_shifts_are_arithmetic());
-//    two_replace_byte(0x12345678, 0, 0xAB);
-//    two_combination(0x89ABCDEF, 0X76543210);
-//    printf("%d \n", two_judgeInt(0x2345688));
 }
