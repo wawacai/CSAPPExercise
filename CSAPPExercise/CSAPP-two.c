@@ -297,12 +297,27 @@ void two_judeTrueOrFalse() {
     // E: 0     正确答案为 1
 }
 
-// MARK: - 没有做出来 2.83
+/// 2.83  没有自己做出来
 void two_eightTreeProblem() {
     // A: Y / (2^k -1)
 }
 
+/// 2.84  没有自己做出来
+int two_float_le(float x, float y) {
+    /*
+     
+     */
+    return 1;
+}
 
+/// 2.85
+void two_float_express() {
+    /*
+     A: E = 2, f = 2^-1 + 2^-2, M = 1 + f, V = 2^2 * M
+     B: E = 2^(k-1) - 1, f = 1 - (n - 2^(k-1) + 1) / 2^n, M = 1 + f, V = 2^E * M
+     C: E = 2^(k-1) -2 + n, f = 0, M = 1, V = 2^(2^(k-1) -2 + n)
+     */
+}
 
 void callTwoFunction(void) {
     unsigned a = -1;
