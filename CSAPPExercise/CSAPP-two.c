@@ -328,6 +328,17 @@ void two_newFloat() {
      */
 }
 
+/// 2.87
+void two_eightNight() {
+    /*
+     A: YES
+     B: NO
+     C: YES
+     D: YES
+     E: YES
+     */
+}
+
 void callTwoFunction(void) {
     unsigned a = -1;
     a = a >> 1;
