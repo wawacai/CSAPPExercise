@@ -319,6 +319,15 @@ void two_float_express() {
      */
 }
 
+/// 2.86
+void two_newFloat() {
+    /*
+      1/2^16445
+     (1+2^63)/2^16445
+     (1-2^-64) * 2^16384
+     */
+}
+
 void callTwoFunction(void) {
     unsigned a = -1;
     a = a >> 1;
