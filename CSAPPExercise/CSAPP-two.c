@@ -383,7 +383,7 @@ float_bits two_float_negate(float_bits f) {
         return f;
     }
     
-    return ((sign ^ 0x01) << 31) | exp | frac;
+    return ((sign ^ 0x01) << 31) | (exp << 23) | frac;
 }
 
 /// 2.93
@@ -396,7 +396,24 @@ float_bits two_float_absval(float_bits f) {
         return f;
     }
     
-    return ((sign ^ 0) << 31) | exp | frac;
+    return ((sign ^ 0) << 31) | (exp << 23) | frac;
+}
+
+/// 2.94
+float_bits two_float_twice(float_bits f) {
+    unsigned sign = f >> 31;
+    unsigned exp = f >> 23 & 0xff;
+    unsigned frac = f & 0x7fffff;
+    
+    if ((exp ^ 0xff) == 0 && frac != 0) {
+        return f;
+    } else if (exp == 0) {
+        return (sign << 31) | (frac << 1);
+    } else if (exp < 254) {
+        return (sign << 31) | ((exp + 1) << 23) | frac;
+    }
+    
+    return (sign << 31) | (0xff << 23);
 }
 
 void callTwoFunction(void) {
