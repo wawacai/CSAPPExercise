@@ -328,7 +328,7 @@ void two_newFloat() {
      */
 }
 
-/// 2.87
+/// 2.89
 void two_eightNight() {
     /*
      A: YES
@@ -337,6 +337,28 @@ void two_eightNight() {
      D: YES
      E: YES
      */
+}
+
+/// 2.90
+float two_fpwr2(int x) {
+    unsigned exp, frac;
+    unsigned u;
+    
+    if (x < -23) {
+        exp = 0x00000000;
+        frac = 0x00000000;
+    } else if (x < 0) {
+        exp = 0x00000000;
+        frac = 2^x;
+    } else if (x < 128) {
+        exp = 2^x + 127;
+        frac = 0;
+    } else {
+        exp = 0x11;
+        frac = 0;
+    }
+    u = exp << 23 | frac;
+    return (float)u;
 }
 
 void callTwoFunction(void) {
