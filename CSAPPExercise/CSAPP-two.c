@@ -329,7 +329,7 @@ void two_newFloat() {
 }
 
 /// 2.89
-void two_eightNight() {
+void two_eightNine() {
     /*
      A: YES
      B: NO
@@ -359,6 +359,16 @@ float two_fpwr2(int x) {
     }
     u = exp << 23 | frac;
     return (float)u;
+}
+
+/// 2.91
+void two_nineZero() {
+    /*
+     0 10000000 10010010000111111011011
+     A: 11.0010010000111111011011
+     B: 11.001001001001001001001...
+     C: 9
+     */
 }
 
 void callTwoFunction(void) {
