@@ -49,3 +49,14 @@ void three_store_prod(int128_t *dest, int64_t x, int64_t y) {
      */
 }
 
+/// 3.60
+long loop(long x, int n) {
+    long result = 0;
+    long mask;
+    
+    for (mask = 1; mask != 0; mask = mask << n %256) {
+        result = result | (x & 1);
+    }
+    return result;
+}
+
