@@ -60,3 +60,10 @@ long loop(long x, int n) {
     return result;
 }
 
+/// 3.61
+long three_create_alt(long *xp) {
+    long t = 0;
+    long *p = xp ? xp : &t;
+    return *p;
+}
+
