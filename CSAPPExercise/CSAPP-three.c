@@ -100,3 +100,30 @@ long three_switch3(long *p1, long *p2, mode_p action) {
     return result;
 }
 
+/// 3.63
+long three_switch_prob(long x, long n) {
+    long result = x;
+    switch (n) {
+        case 60:
+        case 62:
+            result *= 8;
+            break;
+        case 63:
+            result /= 8;
+            break;
+        case 64:
+            result *= 15;
+            x = result;
+        case 65:
+            x = x^2;
+        default:
+            result += 75;
+            break;
+    }
+    return result;
+    /*
+     0011 1100  60
+     0100 1011  75
+     */
+}
+
