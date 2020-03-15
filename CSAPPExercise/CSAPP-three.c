@@ -146,3 +146,8 @@ long three_switch_prob(long x, long n) {
  C: M = 15
  */
 
+// 3.66
+/*
+ NR: 3n
+ NC: 1 + 4n
+ */
