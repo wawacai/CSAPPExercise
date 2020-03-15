@@ -139,3 +139,10 @@ long three_switch_prob(long x, long n) {
  65R + 65 = 455
  */
 
+// 3.65
+/*
+ A: %rdx
+ B: %rax
+ C: M = 15
+ */
+
