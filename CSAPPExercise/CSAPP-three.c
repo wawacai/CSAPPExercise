@@ -127,3 +127,15 @@ long three_switch_prob(long x, long n) {
      */
 }
 
+// 3.64
+/*
+  A: Xa + 8 * T * (S * i + j) + 8 * k
+ TS = 65
+ T = 13
+ TSR + TS = 455
+ T = 13
+ S = 5
+ R = 6
+ 65R + 65 = 455
+ */
+
