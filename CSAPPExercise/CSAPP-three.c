@@ -169,3 +169,15 @@ long three_switch_prob(long x, long n) {
  3 <= A <= 10
  B = 5 , A = 9
  */
+
+// 3.69
+/*
+ 1 0010 0000  288
+ 281 <=  <= 284
+ 
+ A: 7
+ B:  struct {
+    long idx;
+    long x[4];
+ }
+ */
