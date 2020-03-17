@@ -181,3 +181,24 @@ long three_switch_prob(long x, long n) {
     long x[4];
  }
  */
+
+// 3.70
+/*
+ A: 0 8 0 8
+ B: 16
+ */
+
+union ele {
+    struct {
+        long *p;
+        long y;
+    } e1;
+    struct {
+        long x;
+        union ele *next;
+    } e2;
+};
+
+void three_proc(union ele *up) {
+    up->e2.x = *(up->e2.next->e1.p) - up->e2.next->e1.y;
+}
