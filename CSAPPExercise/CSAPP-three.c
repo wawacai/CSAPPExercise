@@ -7,6 +7,8 @@
 //
 
 #include "CSAPP-three.h"
+#include <stdio.h>
+#include <string.h>
 
 void three_twoDecode1(long *xp, long * yp, long *zp) {
     /*
@@ -201,4 +203,31 @@ union ele {
 
 void three_proc(union ele *up) {
     up->e2.x = *(up->e2.next->e1.p) - up->e2.next->e1.y;
+}
+
+/// 3.71
+void three_good_echo() {
+    const int bufferSize = 8;
+    char str[bufferSize];
+    printf("start\n");
+    
+    while (1) {
+        fgets(str, bufferSize, stdin);
+        
+        if (strlen(str) == bufferSize - 1) {
+            fputs(str, stdout);
+            
+            if (str[bufferSize-1-1] == '\n') {
+                break;
+            }
+            memset(str, 0, bufferSize);
+        } else if (strlen(str) < bufferSize - 1) {
+            fputs(str, stdout);
+            break;
+        } else {
+            break;
+        }
+    }
+    printf("end\n");
+    return;
 }

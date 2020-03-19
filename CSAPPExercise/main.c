@@ -8,10 +8,12 @@
 
 #include <stdio.h>
 #include "CSAPP-two.h"
+#include "CSAPP-three.h"
 
 int main(int argc, const char * argv[]) {
-     callTwoFunction();
+//     callTwoFunction();
     // insert code here...
 //    printf("Hello, World!\n");
+    three_good_echo();
     return 0;
 }

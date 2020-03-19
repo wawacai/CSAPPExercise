@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+void three_good_echo(void);
+
 #endif /* CSAPP_three_h */
