@@ -231,3 +231,34 @@ void three_good_echo() {
     printf("end\n");
     return;
 }
+
+// 3.72
+/*
+ s1 = %rsp - 16
+ s2 = s1 - (8n + 30) & -16
+ p = (s2 + 15) & -16
+ */
+
+// 3.73
+typedef enum {NEG, ZERO, POS, OTHER} range_t;
+
+/*
+ find_range:
+    vxorps %xmm1, %xmm1, %xmm1
+    vucomiss %xmm0, %xmm1
+    
+ .L2:
+    movl $2, %eax
+    jmp .Done
+ .L3:
+    movl $0, %eax
+    jmp .Done
+ .L4:
+    movl $1, %eax
+    jmp .Done
+ .L1:
+    movl $3, %eax
+ .Done
+    rep; ret
+    
+ */

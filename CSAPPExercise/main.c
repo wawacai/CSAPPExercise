@@ -14,6 +14,8 @@ int main(int argc, const char * argv[]) {
 //     callTwoFunction();
     // insert code here...
 //    printf("Hello, World!\n");
-    three_good_echo();
+//    three_good_echo();
+
+//    printf("%d", a);
     return 0;
 }
