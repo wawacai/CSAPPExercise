@@ -246,7 +246,10 @@ typedef enum {NEG, ZERO, POS, OTHER} range_t;
  find_range:
     vxorps %xmm1, %xmm1, %xmm1
     vucomiss %xmm0, %xmm1
-    
+    jp .L1
+    ja .L2
+    jb .L3
+    je .L4
  .L2:
     movl $2, %eax
     jmp .Done
@@ -262,3 +265,15 @@ typedef enum {NEG, ZERO, POS, OTHER} range_t;
     rep; ret
     
  */
+
+// 3.74
+/*
+find_range:
+   vxorps %xmm1, %xmm1, %xmm1
+   vucomiss %xmm0, %xmm1
+   cmova $0, %eax
+   cmove $1, %eax
+   cmovb $2, %eax
+   cmovp $3, %eax
+   rep; ret
+*/
