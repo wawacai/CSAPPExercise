@@ -277,3 +277,9 @@ find_range:
    cmovp $3, %eax
    rep; ret
 */
+
+// 3.75
+/*
+ A. 每一个复数变量使用两个%xmm寄存器传送。
+ B. 通过%xmm0和%xmm1返回一个复数类型值。
+ */
