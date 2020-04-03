@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B34521D623C5D08600822B31 /* CSAPP-three.c in Sources */ = {isa = PBXBuildFile; fileRef = B34521D523C5D08600822B31 /* CSAPP-three.c */; };
+		B375F10B24357956002352E0 /* CSAPP-five.c in Sources */ = {isa = PBXBuildFile; fileRef = B375F10A24357956002352E0 /* CSAPP-five.c */; };
 		B39DB8B623AE0C6400899FB8 /* main.c in Sources */ = {isa = PBXBuildFile; fileRef = B39DB8B523AE0C6400899FB8 /* main.c */; };
 		B39DB8BD23AE0C7C00899FB8 /* CSAPP-two.c in Sources */ = {isa = PBXBuildFile; fileRef = B39DB8BC23AE0C7C00899FB8 /* CSAPP-two.c */; };
 /* End PBXBuildFile section */
@@ -27,6 +28,8 @@
 /* Begin PBXFileReference section */
 		B34521D423C5D08600822B31 /* CSAPP-three.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSAPP-three.h"; sourceTree = "<group>"; };
 		B34521D523C5D08600822B31 /* CSAPP-three.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CSAPP-three.c"; sourceTree = "<group>"; };
+		B375F10924357956002352E0 /* CSAPP-five.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSAPP-five.h"; sourceTree = "<group>"; };
+		B375F10A24357956002352E0 /* CSAPP-five.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CSAPP-five.c"; sourceTree = "<group>"; };
 		B39DB8B223AE0C6400899FB8 /* CSAPPExercise */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CSAPPExercise; sourceTree = BUILT_PRODUCTS_DIR; };
 		B39DB8B523AE0C6400899FB8 /* main.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = main.c; sourceTree = "<group>"; };
 		B39DB8BC23AE0C7C00899FB8 /* CSAPP-two.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = "CSAPP-two.c"; sourceTree = "<group>"; };
@@ -68,6 +71,8 @@
 				B39DB8BC23AE0C7C00899FB8 /* CSAPP-two.c */,
 				B34521D423C5D08600822B31 /* CSAPP-three.h */,
 				B34521D523C5D08600822B31 /* CSAPP-three.c */,
+				B375F10924357956002352E0 /* CSAPP-five.h */,
+				B375F10A24357956002352E0 /* CSAPP-five.c */,
 			);
 			path = CSAPPExercise;
 			sourceTree = "<group>";
@@ -132,6 +137,7 @@
 				B39DB8BD23AE0C7C00899FB8 /* CSAPP-two.c in Sources */,
 				B39DB8B623AE0C6400899FB8 /* main.c in Sources */,
 				B34521D623C5D08600822B31 /* CSAPP-three.c in Sources */,
+				B375F10B24357956002352E0 /* CSAPP-five.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
