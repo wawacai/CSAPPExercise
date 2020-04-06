@@ -95,3 +95,33 @@ void five_inner6(vec_ptr u, vec_ptr v, data_t *dest) {
     }
     *dest = sum;
 }
+
+// 5.17
+void *five_basic_memset(void *s, int c, size_t n) {
+    size_t cnt = 0;
+    
+    unsigned long word = 0;
+    unsigned long *sLong = s;
+    unsigned char tempC = (unsigned char)c;
+    size_t ulLong = sizeof(unsigned long);
+    
+    for (int i = 0; i < ulLong; i++) {
+        word += tempC;
+        word = word << i;
+    }
+    
+    for (; cnt < n - ulLong + 1; cnt += ulLong) {
+        *sLong++ = word;
+    }
+    
+    cnt -= (n / ulLong ? 0 : ulLong);
+    
+    unsigned char *schar = (unsigned char *)sLong + ulLong;
+    
+    for (; cnt < n; cnt++) {
+        *schar = tempC;
+        schar++;
+    }
+    
+    return s;
+}
