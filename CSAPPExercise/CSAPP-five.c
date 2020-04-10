@@ -125,3 +125,43 @@ void *five_basic_memset(void *s, int c, size_t n) {
     
     return s;
 }
+
+// 5.18
+double five_poly(double a[], double x, long degree) {
+    long i;
+    double result0 = 0;
+    double result1 = 0;
+    double result2 = 0;
+    double result3 = 0;
+    double result4 = 0;
+    double xpwr = x;
+    double xpwr1 = x * x;
+    double xpwr2 = x * x * x;
+    double xpwr3 = x * x * x * x;
+    double xpwr4 = x * x * x * x * x;
+    
+    double xpwr_setp = x * x * x * x * x * x * x * x * x * x;
+    
+    for (i = 0; i <= degree - 9; i+=9) {
+        result0 = result0 + (a[i] * xpwr + a[i+1] * xpwr);
+        result1 = result1 + (a[i+2] * xpwr1 + a[i+3] * xpwr1);
+        result2 = result2 + (a[i+4] * xpwr2 + a[i+5] * xpwr2);
+        result3 = result3 + (a[i+6] * xpwr3 + a[i+7] * xpwr3);
+        result4 = result4 + (a[i+8] * xpwr4 + a[i+9] * xpwr4);
+        
+        xpwr *= xpwr_setp;
+        xpwr1 *= xpwr_setp;
+        xpwr2 *= xpwr_setp;
+        xpwr3 *= xpwr_setp;
+        xpwr4 *= xpwr_setp;
+    }
+    
+    result0 = result0 + result1 + result2 + result3 + result4;
+    
+    for (; i <= degree; i++) {
+        result0 = result0 + a[i] * xpwr;
+        xpwr *= x;
+    }
+    
+    return result0;
+}
