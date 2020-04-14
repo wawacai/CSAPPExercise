@@ -165,3 +165,26 @@ double five_poly(double a[], double x, long degree) {
     
     return result0;
 }
+
+// 5.19
+void five_psum1(float a[], float p[], long n) {
+    long i;
+    p[0] = a[0];
+    float val = 0;
+    
+    for (i = 0; i < n-2; i+=3) {
+        float temp0 = a[i];
+        float temp1 = temp0 + a[i+1];
+        float temp2 = temp1 + a[i+2];
+        
+        p[i] = val + temp0;
+        p[i+1] = val + temp1;
+        p[i+2] = val + temp2;
+        val += temp2;
+    }
+    
+    for (; i < n; i++) {
+        val += a[i];
+        p[i] = val;
+    }
+}
