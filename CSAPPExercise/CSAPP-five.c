@@ -171,16 +171,17 @@ void five_psum1(float a[], float p[], long n) {
     long i;
     p[0] = a[0];
     float val = 0;
+    float temp0, temp1, temp2;
     
     for (i = 0; i < n-2; i+=3) {
-        float temp0 = a[i];
-        float temp1 = temp0 + a[i+1];
-        float temp2 = temp1 + a[i+2];
+        temp0 = val + a[i];
+        temp1 = temp0 + a[i+1];
+        temp2 = temp1 + a[i+2];
         
-        p[i] = val + temp0;
-        p[i+1] = val + temp1;
-        p[i+2] = val + temp2;
-        val += temp2;
+        p[i] = temp0;
+        p[i+1] = temp1;
+        p[i+2] = temp2;
+        val = val + (a[i] + a[i+1] + a[i+2]);
     }
     
     for (; i < n; i++) {
