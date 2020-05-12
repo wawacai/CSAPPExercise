@@ -266,3 +266,6 @@ C: E = 2, B = 16, S = 8, 25%
  miss rate is 1/4
  
  **/
+
+// 6.42
+// miss rate is 1/4
