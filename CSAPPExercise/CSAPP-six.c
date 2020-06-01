@@ -272,3 +272,21 @@ C: E = 2, B = 16, S = 8, 25%
 
 // 6.43
 // miss rate is 1
+
+// 6.45
+// 1.循环展开
+void six_transposs(int *dst, int *src, int dim) {
+    int i, j;
+    
+    for (i = 0; i < dim; i++) {
+        
+        for (j = 0; j < dim-1; j+=2) {
+            dst[j*dim+i] = src[i*dim+j];
+            dst[(j+1)*dim+i] = src[i*dim+j+1];
+        }
+        
+        for ( ; j < dim; j++) {
+            dst[j*dim+i] = src[i*dim+j];
+        }
+    }
+}
