@@ -19,3 +19,6 @@
  incr   YES     局部      swap.o    .text
  count  YES     局部      swap.o   .bss
  **/
+
+// 7.7
+// 注释 x = -0.0;
