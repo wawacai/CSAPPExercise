@@ -34,3 +34,10 @@
 /*
  main调用的是函数main地址
  **/
+
+// 7.10
+/*
+ A: p.o libx.a
+ B: p.o libx.a liby.a libx.a
+ C: p.o libx.a liby.a libx.a libz.a
+ **/
