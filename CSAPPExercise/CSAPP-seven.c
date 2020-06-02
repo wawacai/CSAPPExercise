@@ -41,3 +41,8 @@
  B: p.o libx.a liby.a libx.a
  C: p.o libx.a liby.a libx.a libz.a
  **/
+
+// 7.11
+/*
+ 未初始化的全局变量的空间
+ **/
