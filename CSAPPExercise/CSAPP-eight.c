@@ -34,3 +34,13 @@
 
 // 8.15
 // 5lines
+
+// 8.16
+// counter = 2
+
+// 8.17
+/*
+ hello 0 1 bye 2 bye
+ hello 1 0 bye 2 bye
+ hello 1 bye 0 2 bye
+ **/
