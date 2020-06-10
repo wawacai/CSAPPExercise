@@ -17,5 +17,10 @@ int main(int argc, const char * argv[]) {
 //    three_good_echo();
 
 //    printf("%d", a);
+    
+    for (int i = 0; argv[i] != NULL; i++) {
+        printf("argv[%d] = %s \n", i, argv[i]);
+    }
+    
     return 0;
 }
