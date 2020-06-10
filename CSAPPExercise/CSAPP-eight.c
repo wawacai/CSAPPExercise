@@ -7,6 +7,7 @@
 //
 
 #include "CSAPP-eight.h"
+#include <unistd.h>
 
 // 8.9
 /*
@@ -47,3 +48,6 @@
 
 // 8.18
 // B D
+
+// 8.19
+// 2^n
