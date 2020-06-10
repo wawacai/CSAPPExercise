@@ -44,3 +44,6 @@
  hello 1 0 bye 2 bye
  hello 1 bye 0 2 bye
  **/
+
+// 8.18
+// B D
