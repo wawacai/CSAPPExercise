@@ -13,4 +13,9 @@
  NO YES YES YES YES YES
  **/
 
-
+// 8.9
+/*
+ A: setjmp fork
+ B: execve longjmp
+ C: setjmp fork
+ */
