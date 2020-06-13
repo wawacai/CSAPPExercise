@@ -33,6 +33,7 @@
 		B34521D523C5D08600822B31 /* CSAPP-three.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CSAPP-three.c"; sourceTree = "<group>"; };
 		B34FA2272490739100793F14 /* CSAPP-eight.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSAPP-eight.h"; sourceTree = "<group>"; };
 		B34FA2282490739100793F14 /* CSAPP-eight.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CSAPP-eight.c"; sourceTree = "<group>"; };
+		B34FA22A2494835D00793F14 /* csapp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = csapp.h; path = "csapp-eight/csapp.h"; sourceTree = SOURCE_ROOT; };
 		B375F10924357956002352E0 /* CSAPP-five.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSAPP-five.h"; sourceTree = "<group>"; };
 		B375F10A24357956002352E0 /* CSAPP-five.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CSAPP-five.c"; sourceTree = "<group>"; };
 		B39DB8B223AE0C6400899FB8 /* CSAPPExercise */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CSAPPExercise; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +76,7 @@
 		B39DB8B423AE0C6400899FB8 /* CSAPPExercise */ = {
 			isa = PBXGroup;
 			children = (
+				B34FA22A2494835D00793F14 /* csapp.h */,
 				B39DB8B523AE0C6400899FB8 /* main.c */,
 				B39DB8BE23AE0C8800899FB8 /* CSAPP-two.h */,
 				B39DB8BC23AE0C7C00899FB8 /* CSAPP-two.c */,
