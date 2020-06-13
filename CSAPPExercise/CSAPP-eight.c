@@ -8,6 +8,7 @@
 
 #include "CSAPP-eight.h"
 #include <unistd.h>
+#include "csapp.h"
 
 // 8.9
 /*
@@ -59,3 +60,27 @@
 /*
  当父进程C接到信号后，它进入信号处理函数，并暂时将这个信号屏蔽（设置block位），这时子进程还在不断的向父进程发送所有剩下的同类信号，pending位被再次置1，而接下来的信号则会被遗弃（只有一个pending位，没办法计数），当父进程C的信号处理函数退出后，block位被置零，刚刚pending的信号再次被送入父进程C，父进程再次进入信号处理函数，这时子进程已经完成所有的信号发送，所以父进程不会再次进入信号处理函数了。综上，父进程C只会进入两次信号处理函数，即counter只会被加2而非5。
  **/
+
+// 8.25
+jmp_buf buf;
+
+void handle(int sig) {
+    longjmp(buf, 1);
+}
+
+char *tfgets(char * __restrict s, int size, FILE *stream) {
+
+    if (!setjmp(buf)) {
+        alarm(5);
+        
+        if (signal(SIGALRM, handle) == SIG_ERR) {
+//            unix_error("set alarm handler error");
+            printf("set alarm handler error");
+        }
+        
+        return fgets(s, size, stream);
+        
+    } else {
+        return NULL;
+    }
+}

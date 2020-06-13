@@ -11,4 +11,6 @@
 
 #include <stdio.h>
 
+char *tfgets(char * __restrict s, int size, FILE *stream);
+
 #endif /* CSAPP_eight_h */
