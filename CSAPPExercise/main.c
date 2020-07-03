@@ -29,12 +29,17 @@ void handle_test(int sig) {
 
 int main(int argc, const char * argv[]) {
     
-    int fp = open("/Users/pengzuoqing/Desktop/openFile.txt", O_RDONLY, 0);
+    int fp = open("/Users/pengzuoqing/Desktop/openFile.txt", O_RDWR, 0);
     struct stat testStat;
     
     fstat(fp, &testStat);
-    int *buf = mmap(NULL, testStat.st_size, PROT_READ, MAP_PRIVATE, fp, 0);
-    write(1, buf, testStat.st_size);
+    int *buf = mmap(NULL, testStat.st_size, PROT_WRITE, MAP_PRIVATE, fp, 0);
+//    (char *)*buf = "jello,world.\n";
+    char *first = (char *)buf;
+    first[0] = 'd';
+    printf("%s\n", (char *)buf);
+    size_t result = write(fp, buf,1);
+    printf("%ld \n", result);
 //     callTwoFunction();
     // insert code here...
 //    printf("Hello, World!\n");

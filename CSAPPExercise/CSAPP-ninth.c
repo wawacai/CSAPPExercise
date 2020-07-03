@@ -7,6 +7,7 @@
 //
 
 #include "CSAPP-ninth.h"
+#include "csapp.h"
 
 // 9.11
 /*
@@ -57,3 +58,18 @@
     缺页  是
     PPN --
  **/
+
+// 9.14
+
+void ninth_changeHelloToJello() {
+    int fp = open("openFile.txt", O_RDWR, 0);
+    struct stat testStat;
+    
+    fstat(fp, &testStat);
+    int *buf = mmap(NULL, testStat.st_size, PROT_WRITE, MAP_PRIVATE, fp, 0);
+    char *first = (char *)buf;
+    first[0] = 'd';
+    printf("%s\n", (char *)buf);
+    size_t result = write(fp, buf,1);
+    printf("%ld \n", result);
+}
