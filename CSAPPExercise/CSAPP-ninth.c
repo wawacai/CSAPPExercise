@@ -73,3 +73,13 @@ void ninth_changeHelloToJello() {
     size_t result = write(fp, buf,1);
     printf("%ld \n", result);
 }
+
+// 9.15
+/*
+ 8  0x9
+ 16 0x11
+ 24 0x19
+ 32 0x21
+ **/
+
+
