@@ -89,3 +89,55 @@ void ninth_changeHelloToJello() {
  16 16  16
  8  16  16
  **/
+
+// 9.17
+
+/* Basic constants and macros */
+#define WSIZE       4       /* Word and header/footer size (bytes) */ //line:vm:mm:beginconst
+#define DSIZE       8       /* Double word size (bytes) */
+#define CHUNKSIZE  (1<<12)  /* Extend heap by this amount (bytes) */  //line:vm:mm:endconst
+
+#define NINE_MAX(x,y) ((x) > (y)?(x) : (y))
+
+#define PACK(size, alloc)  ((size) | (alloc)) //line:vm:mm:pack
+ 
+/* Read and write a word at address p */
+#define GET(p)       (*(unsigned int *)(p))            //line:vm:mm:get
+#define PUT(p, val)  (*(unsigned int *)(p) = (val))    //line:vm:mm:put
+ 
+/* Read the size and allocated fields from address p */
+#define GET_SIZE(p)  (GET(p) & ~0x7)                   //line:vm:mm:getsize
+#define GET_ALLOC(p) (GET(p) & 0x1)                    //line:vm:mm:getalloc
+#define GET_PREVIOUS_ALLOC(p) (GET(p) & 0x2) /* ! CHANGED ! */
+ 
+/* Given block ptr bp, compute address of its header and footer */
+#define HDRP(bp)       ((char *)(bp) - WSIZE)                      //line:vm:mm:hdrp
+#define FTRP(bp)       ((char *)(bp) + GET_SIZE(HDRP(bp)) - DSIZE) //line:vm:mm:ftrp
+ 
+/* Given block ptr bp, compute address of next and previous blocks */
+#define NEXT_BLKP(bp)  ((char *)(bp) + GET_SIZE(((char *)(bp) - WSIZE))) //line:vm:mm:nextblkp
+#define PREV_BLKP(bp)  ((char *)(bp) - GET_SIZE(((char *)(bp) - DSIZE)))
+
+
+/* Global variables */
+static char *mem_max_addr;
+static char *heap_listp = 0;  /* Pointer to first block */
+static char *rover;           /* Next fit rover */
+
+void *nine_nextFit(int asize) {
+    char *oldRover = rover;
+    
+    for (; rover < mem_max_addr; NEXT_BLKP(rover)) {
+        if (!GET_ALLOC(HDRP(rover)) && GET_SIZE(HDRP(rover)) >= asize) {
+            return rover;
+        }
+    }
+    
+    for (rover = heap_listp; rover < oldRover; NEXT_BLKP(rover)) {
+        if (!GET_ALLOC(HDRP(rover)) && GET_SIZE(HDRP(rover)) >= asize) {
+            return rover;
+        }
+    }
+    
+    return NULL;
+}
