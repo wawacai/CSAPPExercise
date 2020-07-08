@@ -141,3 +141,9 @@ void *nine_nextFit(int asize) {
     
     return NULL;
 }
+
+// 9.18
+// https://dreamanddead.gitbooks.io/csapp-3e-solutions/chapter9/9.18.html
+
+// 9.19
+// a d b
