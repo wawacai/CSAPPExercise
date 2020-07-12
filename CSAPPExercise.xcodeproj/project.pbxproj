@@ -15,6 +15,7 @@
 		B3A5819924A9846300593ED7 /* CSAPP-ninth.c in Sources */ = {isa = PBXBuildFile; fileRef = B3A5819824A9846300593ED7 /* CSAPP-ninth.c */; };
 		B3A61092245FBCC700BC9651 /* CSAPP-six.c in Sources */ = {isa = PBXBuildFile; fileRef = B3A61091245FBCC700BC9651 /* CSAPP-six.c */; };
 		B3C629FF2484960400774B71 /* CSAPP-seven.c in Sources */ = {isa = PBXBuildFile; fileRef = B3C629FE2484960400774B71 /* CSAPP-seven.c */; };
+		B3FBDCD124BB4C6000F680BB /* CSAPP-ten.c in Sources */ = {isa = PBXBuildFile; fileRef = B3FBDCD024BB4C6000F680BB /* CSAPP-ten.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,8 @@
 		B3A61091245FBCC700BC9651 /* CSAPP-six.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CSAPP-six.c"; sourceTree = "<group>"; };
 		B3C629FD2484960400774B71 /* CSAPP-seven.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSAPP-seven.h"; sourceTree = "<group>"; };
 		B3C629FE2484960400774B71 /* CSAPP-seven.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CSAPP-seven.c"; sourceTree = "<group>"; };
+		B3FBDCCF24BB4C6000F680BB /* CSAPP-ten.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CSAPP-ten.h"; sourceTree = "<group>"; };
+		B3FBDCD024BB4C6000F680BB /* CSAPP-ten.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = "CSAPP-ten.c"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +98,8 @@
 				B34FA2282490739100793F14 /* CSAPP-eight.c */,
 				B3A5819724A9846300593ED7 /* CSAPP-ninth.h */,
 				B3A5819824A9846300593ED7 /* CSAPP-ninth.c */,
+				B3FBDCCF24BB4C6000F680BB /* CSAPP-ten.h */,
+				B3FBDCD024BB4C6000F680BB /* CSAPP-ten.c */,
 			);
 			path = CSAPPExercise;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				B39DB8BD23AE0C7C00899FB8 /* CSAPP-two.c in Sources */,
 				B39DB8B623AE0C6400899FB8 /* main.c in Sources */,
 				B3A5819924A9846300593ED7 /* CSAPP-ninth.c in Sources */,
+				B3FBDCD124BB4C6000F680BB /* CSAPP-ten.c in Sources */,
 				B34521D623C5D08600822B31 /* CSAPP-three.c in Sources */,
 				B375F10B24357956002352E0 /* CSAPP-five.c in Sources */,
 				B3A61092245FBCC700BC9651 /* CSAPP-six.c in Sources */,
